@@ -1,8 +1,11 @@
 import { Request, Response } from "express";
+import { prisma } from '../lib/prisma';
 
 
 async function getAllCompanies( req: Request  , res: Response ){
+    const companies = await prisma.company.findMany();
 
+    return res.json({ companies });
 }
 
 async function getCompanyById(req: Request  , res: Response) {
