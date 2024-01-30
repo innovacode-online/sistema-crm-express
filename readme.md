@@ -6,6 +6,12 @@
 
 2. Renonbrar el archivo ```.env.template``` a ```.env``` y asignar valores correctos
 
+3. Ejecutar en una terminal el siguiente comando para levantar la base de datos en un contenedor de Docker
+```bash
+docker compose up -d
+```
+
+
 ### Ejecutar el proyecto
 
 ```bash
