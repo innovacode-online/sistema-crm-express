@@ -13,7 +13,7 @@ datasource db {
 model Company {
   id          String @id @default(uuid())
   name        String @db.VarChar()
-  email       String @db.VarChar()
+  email       String @unique @db.VarChar()
   direction   String @db.VarChar()
   numberPhone String @db.VarChar()
 
@@ -27,7 +27,7 @@ model Client {
   id          String @id @default(uuid())
   name        String @db.VarChar()
   lastname    String @db.VarChar()
-  email       String @db.VarChar()
+  email       String @unique @db.VarChar()
   numberPhone String @db.VarChar()
 
   createdAt DateTime? @db.Timestamp(6)
